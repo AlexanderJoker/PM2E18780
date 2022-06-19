@@ -3,30 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PM2E18780.MainPage">
 
-    <StackLayout>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
 
-        <Image x:Name="uth" HeightRequest="10" WidthRequest="10" Source="Logo.png" />
-        <Label Text="SITE VISITOR APP"  FontSize="18" HorizontalOptions="Center" Margin="0, 0, 0, 10"/>
+                <Image x:Name="uth" HeightRequest="55" WidthRequest="55" Source="Logo.png" />
+                <Label Text="SITE VISITOR APP"  FontSize="15" HorizontalOptions="Center" Margin="0, 0, 0, 0"/>
 
-        <Image x:Name="imgubicacion" HeightRequest="200" WidthRequest="100" BackgroundColor="AntiqueWhite" Margin="10" />
-        <Button x:Name="btntomarfoto" Text="Tomar Foto" Margin="50, 0" BackgroundColor="LightSkyBlue"/>
+                <Image x:Name="imgubicacion" HeightRequest="200" WidthRequest="100" BackgroundColor="AntiqueWhite" Margin="10" />
+                <Button x:Name="btntomarfoto" Text="Tomar Foto" Clicked="btntomarfoto_Clicked" Margin="65, 0"  BackgroundColor="LightSkyBlue"/>
 
-        <Label Text="Longitud:" Margin="20, 5, 20, 0"/>
-        <Entry x:Name="Longitud" IsEnabled="False" Margin="20, 0, 20, 0"/>
+                <Label Text="Longitud:" Margin="20, 5, 20, 0"/>
+                <Entry x:Name="Longitud" IsEnabled="False" Margin="20, 0, 20, 0"/>
 
-        <Label Text="Latitud:"  Margin="20, 0"/>
-        <Entry x:Name="Latitud" IsEnabled="False" Margin="20, 0, 20, 0"/>
+                <Label Text="Latitud:"  Margin="20, 0"/>
+                <Entry x:Name="Latitud" IsEnabled="False" Margin="20, 0, 20, 0"/>
 
-        <Label Text="Descripcion:"  Margin="20, 0"/>
-        <Entry x:Name="Descripcion_input"  Margin="20, 0, 20, 0"/>
+                <Label Text="Descripcion:"  Margin="20, 0"/>
+                <Entry x:Name="Descripcion"  Margin="20, 0, 20, 0"/>
 
-        <Grid ColumnDefinitions="*,*" Margin="15, 0">
-        <Button x:Name="btnguardar" Text="Guardar" BackgroundColor="AntiqueWhite" Grid.Column="0"/>
+                <Grid ColumnDefinitions="*,*" Margin="15, 0">
+                    <Button x:Name="btnguardar" Text="Guardar" BackgroundColor="AntiqueWhite" Clicked="btnguardar_Clicked" Grid.Column="0"/>
 
-        <Button x:Name="btnlista" BackgroundColor="Bisque" Text="Ubicaciones" Grid.Column="1"/>
-        </Grid>
+                    <Button x:Name="btnlista" Clicked="btnlista_Clicked" BackgroundColor="Bisque" Text="Lista Sitios" Grid.Column="1"/>
+                </Grid>
 
-        <Button x:Name="btnsalir" Text="Salir" BackgroundColor="LightCoral" HorizontalOptions="Fill" Margin="95, 0, 95, 50" />
-    </StackLayout>
+                <Button x:Name="btnsalir" Text="Salir" Clicked="btnsalir_Clicked" BackgroundColor="LightCoral" HorizontalOptions="Fill" Margin="95, 0, 95, 50" />
 
+
+                <Label Text="By Liliana Hernandez y Delbert Lira"  FontSize="15" HorizontalOptions="Center" Margin="0, 0, 0, 0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

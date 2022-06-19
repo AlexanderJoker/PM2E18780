@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2E18780.Mapa">
+    <ContentPage.Content>
+        <StackLayout>
+            <maps:Map HorizontalOptions="FillAndExpand" 
+                      VerticalOptions="FillAndExpand" x:Name="Map" IsShowingUser="True" />
+            <Label x:Name="Lati"   Text="{Binding Latitud}" HorizontalTextAlignment="Center"/>
+            <Label x:Name="Longi"  Text="{Binding Longitud}" HorizontalTextAlignment="Center"/>
+            <Label x:Name="Desc" IsVisible="false" Text="{Binding Descripcion}"/>
+            <Button x:Name="btncompartir" Text="Compartir Imagen De Ubicacion" HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center" Clicked="btncompartir_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

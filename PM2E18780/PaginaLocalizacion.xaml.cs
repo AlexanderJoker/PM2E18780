@@ -9,6 +9,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace PM2E18780
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -40,14 +41,10 @@ namespace PM2E18780
 
             if (alert)
             {
-                var lvmpDescripcion = await App.BaseDatos.ObtenerDescripcion(item.Descripcion);
-                var lvmprLongitud = await App.BaseDatos.ObtenerLongitud(item.Longitud);
-                var lvmprLatitud = await App.BaseDatos.ObtenerLatitud(item.Latitud);
 
-                await Xamarin.Essentials.Map.OpenAsync(lvmprLongitud.Longitud, lvmprLatitud.Latitud, new MapLaunchOptions
-                {
-                    Name = lvmpDescripcion.Descripcion
-                });
+                var Nuevom = new  Mapa();
+                Nuevom.BindingContext = item;
+                await Navigation.PushAsync(Nuevom);
             }
             else
             {

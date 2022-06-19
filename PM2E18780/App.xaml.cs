@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using PM2E18780.Controles;
 using System.IO;
+
 namespace PM2E18780
 {
     public partial class App : Application
@@ -27,7 +28,7 @@ namespace PM2E18780
 
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
