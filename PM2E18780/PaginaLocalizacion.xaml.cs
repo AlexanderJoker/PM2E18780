@@ -31,7 +31,7 @@ namespace PM2E18780
                 observableCollectionPhotos.Add(img);
             }
         }
-
+        //Aqui estoy como enviado
         private async void ListaUbicaciones_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             Ubicaciones item = (Ubicaciones)e.Item;
