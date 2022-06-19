@@ -43,6 +43,7 @@ namespace PM2E18780
             {
 
                 var Nuevom = new  Mapa();
+                Nuevom.imgcap = item.Imagen;
                 Nuevom.BindingContext = item;
                 await Navigation.PushAsync(Nuevom);
             }

@@ -16,6 +16,7 @@ namespace PM2E18780
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Mapa : ContentPage
     {
+        public Byte[] imgcap { get; set; }
         public Mapa()
         {
             InitializeComponent();
@@ -56,22 +57,11 @@ namespace PM2E18780
 
         public async Task Capturar()
         {
-
-            Byte[] imgByteArray;
+              
             var photo = "Photo.jpg";
             var file = Path.Combine(FileSystem.CacheDirectory, photo);
+            File.WriteAllBytes(file, imgcap);
 
-            var PantallaCap = await Screenshot.CaptureAsync();
-            var stream = await PantallaCap.OpenReadAsync();
-            var Image = ImageSource.FromStream(() => stream);
-
-            StreamImageSource streamImageSource = (StreamImageSource)Image;
-            System.Threading.CancellationToken cancellationToken = System.Threading.CancellationToken.None;
-            Task<Stream> task = streamImageSource.Stream(cancellationToken);
-            Stream stream2 = task.Result;
-
-            imgByteArray = ReadFully(stream2);
-            File.WriteAllBytes(file, imgByteArray);
 
             await Share.RequestAsync(new ShareFileRequest { Title = Title, File = new ShareFile(file) });
         }
