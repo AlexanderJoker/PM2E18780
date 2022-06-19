@@ -9,7 +9,7 @@ using PM2E18780.Models;
 
 namespace PM2E18780.Controles
 {
-    class DataBase
+    public class DataBase
     {
         readonly SQLiteAsyncConnection db;
 

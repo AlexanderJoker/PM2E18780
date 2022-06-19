@@ -5,7 +5,7 @@
 
     <StackLayout>
 
-        <Image x:Name="uth" HeightRequest="10" WidthRequest="10" Source="uthlogo.png" />
+        <Image x:Name="uth" HeightRequest="10" WidthRequest="10" Source="Logo.png" />
         <Label Text="SITE VISITOR APP"  FontSize="18" HorizontalOptions="Center" Margin="0, 0, 0, 10"/>
 
         <Image x:Name="imgubicacion" HeightRequest="200" WidthRequest="100" BackgroundColor="AntiqueWhite" Margin="10" />
