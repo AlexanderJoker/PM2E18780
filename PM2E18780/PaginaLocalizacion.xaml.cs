@@ -37,7 +37,7 @@ namespace PM2E18780
         {
             Ubicaciones item = (Ubicaciones)e.Item;
 
-            var alert = await DisplayAlert("Seleccione", "Seleccione que desea hacer a continuacion", "Ir a la Ubicacion", "Borrar Ubicacion");
+            var alert = await DisplayAlert("Seleccione", "Seleccione Una Opción", "Ir a la Ubicacion", "Borrar Ubicacion");
 
             if (alert)
             {

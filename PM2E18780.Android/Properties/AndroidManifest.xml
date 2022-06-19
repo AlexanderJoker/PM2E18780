@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.pm2e18780">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
     <application android:label="PM2E18780.Android" android:theme="@style/MainTheme">
-      <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDp6pZDYuKdS3dqA4ZKpMwoRYMTo2-AM38"/>
+      <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBSOtsYr8y3KBdIp9Wt1NAc6kl6P98Bu84" />
       <provider android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
